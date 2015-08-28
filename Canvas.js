@@ -1,4 +1,4 @@
-define(function(){
+define(['Rect'],function(Rect){
     // 'use strict';
 
     function Canvas(width, height) {
@@ -25,7 +25,7 @@ define(function(){
     // 计算缩放比率
     function log(a, x) { return Math.log(x) / Math.log(a); }
     CPT.ratio = log(CPT.maxWidth/CPT.minWidth, CPT.maxColumn/CPT.minColumn);
-    console.log(CPT);
+    // console.log(CPT);
 
     // 根据宽高，重新计算画布相关参数
     CPT.resize = function(width, height) {
@@ -70,7 +70,7 @@ define(function(){
 
         // Array.prototype.push.apply(this.rects, arguments);
         this.rects = _.union(this.rects, _.toArray(arguments));
-        this.updateBitmap();
+        // this.updateBitmap();
     }
 
     // 重新计算 bitmap 中的数据

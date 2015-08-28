@@ -42,5 +42,17 @@ define(function(){
         }
     }
 
+    PPT.add = function(vx,vy){
+        var newPoint = _.clone(this);
+        if (newPoint.isVector(vx)) {
+            newPoint.x += vx.x;
+            newPoint.y += vx.y;
+        } else {
+            newPoint.x += vx;
+            newPoint.y += vy;
+        }
+        return newPoint;
+    };
+
     return Point;
 });
